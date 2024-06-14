@@ -2,12 +2,12 @@ let myFunc = () => {};
 
 const arr = [
   6, 4, 14, 4, 24, 4, 34, 4, 4, 4, 4, 1, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,
-  5, 5, 5, 5, 54, 11, 4, 3, 4,
+  5, 5, 5, 5, 54, 11, 4, 14, 14,
 ];
-for (let a = 0; a < 100000; a++) {
-  arr.unshift(3);
-}
-const target = 14;
+// for (let a = 0; a < 100000; a++) {
+//   arr.unshift(3);
+// }
+const target = 4;
 
 function findTargetSum() {
   const startTime = Date.now();
@@ -42,6 +42,26 @@ function findTargetSumWithSet() {
   console.log("not found");
 }
 
+function switchArrayValues() {
+  let lastAvailableIndex = arr.length - 1;
+  for (let j = lastAvailableIndex; j >= 0; j--) {
+    if (arr[j] !== target) {
+      lastAvailableIndex = j;
+      break;
+    }
+  }
+  for (let i = 0; i <= lastAvailableIndex; i++) {
+    if (arr[i] === target) {
+      let temp = arr[i];
+      arr[i] = arr[lastAvailableIndex];
+      arr[lastAvailableIndex] = temp;
+      lastAvailableIndex--;
+    }
+  }
+  console.log(arr);
+}
+
+myFunc = switchArrayValues;
 // myFunc = findTargetSumWithSet;
 // myFunc = findTargetSum;
 
