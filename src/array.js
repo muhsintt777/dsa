@@ -7,7 +7,7 @@ const arr = [
 // for (let a = 0; a < 100000; a++) {
 //   arr.unshift(3);
 // }
-const target = 4;
+const target = 54;
 
 function findTargetSum() {
   const startTime = Date.now();
@@ -43,19 +43,21 @@ function findTargetSumWithSet() {
 }
 
 function switchArrayValues() {
-  let lastAvailableIndex = arr.length - 1;
-  for (let j = lastAvailableIndex; j >= 0; j--) {
-    if (arr[j] !== target) {
-      lastAvailableIndex = j;
-      break;
-    }
-  }
-  for (let i = 0; i <= lastAvailableIndex; i++) {
-    if (arr[i] === target) {
-      let temp = arr[i];
-      arr[i] = arr[lastAvailableIndex];
-      arr[lastAvailableIndex] = temp;
-      lastAvailableIndex--;
+  let lastIndex = arr.length - 1;
+  let currentIndex = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (lastIndex === currentIndex) break;
+    if (arr[currentIndex] === target && arr[lastIndex] !== target) {
+      const temp = arr[currentIndex];
+      arr[currentIndex] = arr[lastIndex];
+      arr[lastIndex] = temp;
+
+      lastIndex--;
+      currentIndex++;
+    } else if (arr[lastIndex] === target) {
+      lastIndex--;
+    } else if (arr[currentIndex] !== target) {
+      currentIndex++;
     }
   }
   console.log(arr);
