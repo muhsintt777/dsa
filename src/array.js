@@ -63,7 +63,7 @@ function switchArrayValues() {
   console.log(arr);
 }
 
-myFunc = switchArrayValues;
+// myFunc = switchArrayValues;
 // myFunc = findTargetSumWithSet;
 // myFunc = findTargetSum;
 
