@@ -84,6 +84,21 @@ class LinkedList {
     }
   }
 
+  deleteByValue(value) {
+    if (this.isEmpty()) {
+      console.log("value not found");
+    } else {
+      let currNode = this.getHead();
+      while (currNode) {
+        currValue = currNode.getValue();
+        if (currNode === value) {
+          const nextNode = currNode.getNext();
+        }
+        currNode = currNode.getNext();
+      }
+    }
+  }
+
   print() {
     let values = "";
     if (this.isEmpty()) {
