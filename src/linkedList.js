@@ -96,6 +96,9 @@ class LinkedList {
         const nextNode = currNode.getNext();
         this.updateHead(nextNode);
         return;
+      } else {
+        // currNode = ;
+        prevNode = currNode;
       }
 
       while (currNode) {
