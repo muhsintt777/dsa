@@ -89,6 +89,15 @@ class LinkedList {
       console.log("value not found");
     } else {
       let currNode = this.getHead();
+      let prevNode = null;
+
+      if (currNode.getValue() === value) {
+        //delete head
+        const nextNode = currNode.getNext();
+        this.updateHead(nextNode);
+        return;
+      }
+
       while (currNode) {
         currValue = currNode.getValue();
         if (currNode === value) {
@@ -122,5 +131,8 @@ export default () => {
   list.addToEnd(333);
   list.addToStart(8);
   list.addToStart(9);
+  console.log(list.print());
+
+  list.deleteByValue(9);
   console.log(list.print());
 };
