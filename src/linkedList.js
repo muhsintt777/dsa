@@ -137,5 +137,5 @@ export default () => {
   console.log(list.print());
 
   list.deleteByValue(9);
-  console.log(list.print());
+  // console.log(list.print());
 };
