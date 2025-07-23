@@ -91,3 +91,30 @@ export const transposeMatrix = () => {
   }
   displayMatrix(newMatrix);
 };
+
+export const rotateMatrix = () => {
+  const matrix = [
+    [1, 2, 3],
+    [4, 5, 62],
+  ];
+  displayMatrix(matrix);
+
+  //step 1 - transepose
+  const newMatrix = [];
+  const newRow = matrix[0].length;
+  const newCol = matrix.length;
+
+  for (let i = 0; i < newRow; i++) {
+    newMatrix[i] = [];
+    for (let j = 0; j < newCol; j++) {
+      newMatrix[i][j] = matrix[j][i];
+    }
+  }
+
+  //step 2 - reverse row
+  for (let i = 0; i < newMatrix.length; i++) {
+    newMatrix[i].reverse();
+  }
+
+  displayMatrix(newMatrix);
+};
