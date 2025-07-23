@@ -2,6 +2,7 @@ import array from './src/array.js';
 import linkedList from './src/linkedList.js';
 import {
   reverseRowMatrix,
+  swapColumnsMatrix,
   swapRowsMatrix,
   traversingMatrix,
 } from './src/matrix.js';
@@ -9,4 +10,5 @@ import {
 // linkedList();
 // traversingMatrix();
 // reverseRowMatrix();
-swapRowsMatrix();
+// swapRowsMatrix();
+swapColumnsMatrix();

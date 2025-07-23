@@ -55,3 +55,20 @@ export const swapRowsMatrix = () => {
   [matrix[r1], matrix[r2]] = [matrix[r2], matrix[r1]];
   displayMatrix(matrix);
 };
+
+export const swapColumnsMatrix = () => {
+  const matrix = [
+    [1, 22, 3],
+    [45, 5, 56],
+    [7, 85, 59],
+  ];
+  displayMatrix(matrix);
+
+  const c1 = 0;
+  const c2 = 1;
+  for (let i = 0; i < matrix.length; i++) {
+    [matrix[i][c1], matrix[i][c2]] = [matrix[i][c2], matrix[i][c1]];
+  }
+
+  displayMatrix(matrix);
+};
