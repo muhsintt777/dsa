@@ -40,3 +40,18 @@ export const reverseRowMatrix = () => {
   }
   displayMatrix(matrix);
 };
+
+export const swapRowsMatrix = () => {
+  const matrix = [
+    [1, 22, 3],
+    [45, 5, 56],
+    [7, 85, 59],
+  ];
+  displayMatrix(matrix);
+
+  const r1 = 0;
+  const r2 = 2;
+
+  [matrix[r1], matrix[r2]] = [matrix[r2], matrix[r1]];
+  displayMatrix(matrix);
+};
