@@ -1,8 +1,8 @@
 export const transverseMatrix = () => {
   const matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9],
+    [1, 22, 3],
+    [45, 5, 56],
+    [7, 85, 59],
   ];
 
   const rowLimit = matrix.length;
