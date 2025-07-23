@@ -4,6 +4,7 @@ import {
   reverseRowMatrix,
   swapColumnsMatrix,
   swapRowsMatrix,
+  transposeMatrix,
   traversingMatrix,
 } from './src/matrix.js';
 
@@ -11,4 +12,5 @@ import {
 // traversingMatrix();
 // reverseRowMatrix();
 // swapRowsMatrix();
-swapColumnsMatrix();
+// swapColumnsMatrix();
+transposeMatrix();
