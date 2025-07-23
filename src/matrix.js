@@ -1,4 +1,4 @@
-export const transverseMatrix = () => {
+export const traversingMatrix = () => {
   const matrix = [
     [1, 22, 3],
     [45, 5, 56],
