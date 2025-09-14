@@ -8,6 +8,9 @@ import {
   transposeMatrix,
   traversingMatrix,
 } from './src/matrix.js';
+import { isPalondrome, reverseArray } from './src/twoPointers.js';
+
+console.log('---');
 
 // linkedList();
 // traversingMatrix();
@@ -15,4 +18,7 @@ import {
 // swapRowsMatrix();
 // swapColumnsMatrix();
 // transposeMatrix();
-rotateMatrix();
+// rotateMatrix();
+
+// reverseArray();
+isPalondrome();
