@@ -8,6 +8,7 @@ import {
   transposeMatrix,
   traversingMatrix,
 } from './src/matrix.js';
+import { maxSumSubarray } from './src/slidingWindow.js';
 import { isPalondrome, reverseArray } from './src/twoPointers.js';
 
 console.log('---');
@@ -21,4 +22,5 @@ console.log('---');
 // rotateMatrix();
 
 // reverseArray();
-isPalondrome();
+// isPalondrome();
+maxSumSubarray();
