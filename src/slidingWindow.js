@@ -18,3 +18,30 @@ export const maxSumSubarray = () => {
   }
   console.log('result-- ', maxSum);
 };
+
+export const longestSubstringLengthWithoutRepeatingChars = () => {
+  const str = 'wwwabcdttt';
+  let leftIndex = 0;
+  let maxLength = 0;
+  let longestSubstring = '';
+  const lastseen = new Map();
+
+  for (let right = 0; right < str.length; right++) {
+    const ch = str[right];
+
+    if (lastseen.has(ch) && lastseen.get(ch) >= leftIndex) {
+      leftIndex = lastseen.get(ch) + 1;
+    }
+
+    lastseen.set(ch, right);
+
+    const newLength = right - leftIndex + 1;
+    if (newLength > maxLength) {
+      maxLength = newLength;
+      longestSubstring = str.substring(leftIndex, right + 1);
+    }
+  }
+
+  console.log('result-- ', maxLength);
+  console.log('longestSubstring-- ', longestSubstring);
+};
