@@ -1,4 +1,5 @@
 import array from './src/array.js';
+import { binerySearch } from './src/binerySearch.js';
 import linkedList from './src/linkedList.js';
 import {
   reverseRowMatrix,
@@ -27,4 +28,5 @@ console.log('---');
 // reverseArray();
 // isPalondrome();
 // maxSumSubarray();
-longestSubstringLengthWithoutRepeatingChars();
+// longestSubstringLengthWithoutRepeatingChars();
+binerySearch();
