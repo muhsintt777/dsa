@@ -9,6 +9,7 @@ import {
   transposeMatrix,
   traversingMatrix,
 } from './src/matrix.js';
+import { mergeSort } from './src/mergeSort.js';
 import {
   longestSubstringLengthWithoutRepeatingChars,
   maxSumSubarray,
@@ -29,4 +30,9 @@ console.log('---');
 // isPalondrome();
 // maxSumSubarray();
 // longestSubstringLengthWithoutRepeatingChars();
-binerySearch();
+// binerySearch();
+
+const arr = [4, 3, 2, 5, 1, 6];
+const compare = (a, b) => a - b;
+const result = mergeSort(arr, compare);
+console.log('result-- ', result);
