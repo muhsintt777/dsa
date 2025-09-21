@@ -13,6 +13,7 @@ import { mergeSort } from './src/mergeSort.js';
 import {
   longestSubstringLengthWithoutRepeatingChars,
   maxSumSubarray,
+  subarrayWithGivenSum,
 } from './src/slidingWindow.js';
 import { isPalondrome, reverseArray } from './src/twoPointers.js';
 
@@ -32,7 +33,9 @@ console.log('---');
 // longestSubstringLengthWithoutRepeatingChars();
 // binerySearch();
 
-const arr = [4, 3, 2, 5, 1, 6];
-const compare = (a, b) => a - b;
-const result = mergeSort(arr, compare);
-console.log('result-- ', result);
+// const arr = [4, 3, 2, 5, 1, 6];
+// const compare = (a, b) => a - b;
+// const result = mergeSort(arr, compare);
+// console.log('result-- ', result);
+
+subarrayWithGivenSum();

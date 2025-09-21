@@ -45,3 +45,31 @@ export const longestSubstringLengthWithoutRepeatingChars = () => {
   console.log('result-- ', maxLength);
   console.log('longestSubstring-- ', longestSubstring);
 };
+
+export const subarrayWithGivenSum = () => {
+  const arr = [2, 2, 1, 2, 6];
+  const target = 8;
+
+  let leftIndex = 0;
+  let rightIndex = 1;
+  let windowSum = arr[0];
+
+  if (windowSum == target) {
+    console.log('result-- ', 0, 0);
+    return;
+  }
+
+  while (rightIndex < arr.length) {
+    const sum = windowSum + arr[rightIndex];
+    if (sum === target) {
+      console.log('result-- ', leftIndex, rightIndex);
+      return;
+    } else if (sum < target) {
+      windowSum += arr[rightIndex];
+      rightIndex++;
+    } else if (sum > target) {
+      windowSum -= arr[leftIndex];
+      leftIndex++;
+    }
+  }
+};
