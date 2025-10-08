@@ -1,5 +1,6 @@
 import array from './src/array.js';
 import { binerySearch } from './src/binerySearch.js';
+import { climbingStairs } from './src/climbingStairs.js';
 import linkedList from './src/linkedList.js';
 import {
   reverseRowMatrix,
@@ -38,4 +39,6 @@ console.log('---');
 // const result = mergeSort(arr, compare);
 // console.log('result-- ', result);
 
-subarrayWithGivenSum();
+// subarrayWithGivenSum();
+
+climbingStairs();
