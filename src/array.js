@@ -9,21 +9,6 @@ const arr = [
 // }
 const target = 54;
 
-function findTargetSum() {
-  const startTime = Date.now();
-  for (let i = 0; i < arr.length - 1; i++) {
-    for (let j = i + 1; j < arr.length; j++) {
-      if (arr[i] + arr[j] === target) {
-        console.log(arr[i], arr[j]);
-        const foundTime = Date.now();
-        console.log("time: ", foundTime - startTime);
-        return;
-      }
-    }
-  }
-  console.log("target not found");
-}
-
 function findTargetSumWithSet() {
   const startTime = Date.now();
   const set = new Set();
@@ -33,13 +18,13 @@ function findTargetSumWithSet() {
     if (set.has(match)) {
       const foundTime = Date.now();
       console.log(currNum, match);
-      console.log("time", foundTime - startTime);
+      console.log('time', foundTime - startTime);
       return;
     } else {
       set.add(currNum);
     }
   }
-  console.log("not found");
+  console.log('not found');
 }
 
 function switchArrayValues() {
