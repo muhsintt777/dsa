@@ -14,3 +14,8 @@ export function findEmployeePosition(data, name) {
 
   if (p) return p;
 }
+
+export const factorialRecurion = (n) => {
+  if (n <= 1) return 1;
+  return n * factorialRecurion(n - 1);
+};
