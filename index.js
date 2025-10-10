@@ -1,28 +1,4 @@
-import array from './src/array.js';
-import { binerySearch } from './src/binerySearch.js';
-import { climbingStairs } from './src/climbingStairs.js';
-import { nestedObjEmployeeDetails } from './src/data.js';
-import linkedList from './src/linkedList.js';
-import {
-  reverseRowMatrix,
-  rotateMatrix,
-  swapColumnsMatrix,
-  swapRowsMatrix,
-  transposeMatrix,
-  traversingMatrix,
-} from './src/matrix.js';
-import { mergeSort } from './src/mergeSort.js';
-import {
-  factorialRecurion,
-  fibonacciRecursion,
-  findEmployeePosition,
-} from './src/recursion.js';
-import {
-  longestSubstringLengthWithoutRepeatingChars,
-  maxSumSubarray,
-  subarrayWithGivenSum,
-} from './src/slidingWindow.js';
-import { isPalondrome, reverseArray } from './src/twoPointers.js';
+import { fibonacciRecursion } from './src/recursion.js';
 
 console.log('---');
 
