@@ -24,3 +24,13 @@ export const fibonacciRecursion = (n) => {
   if (n <= 2) return n;
   return fibonacciRecursion(n - 1) + fibonacciRecursion(n - 2);
 };
+
+export const sumOfArrayRecursion = (arr = []) => {
+  if (arr.length === 1) return arr[0];
+  if (!arr.length) return 0;
+  console.log('arr-', arr);
+
+  const lastElment = arr[arr.length - 1];
+  arr.pop();
+  return lastElment + sumOfArrayRecursion(arr);
+};

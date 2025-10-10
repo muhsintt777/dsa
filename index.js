@@ -1,4 +1,4 @@
-import { fibonacciRecursion } from './src/recursion.js';
+import { fibonacciRecursion, sumOfArrayRecursion } from './src/recursion.js';
 
 console.log('---');
 
@@ -31,5 +31,8 @@ console.log('---');
 // const fac = factorialRecurion(7);
 // console.log(fac);
 
-const fib = fibonacciRecursion(5);
-console.log(fib);
+// const fib = fibonacciRecursion(5);
+// console.log(fib);
+
+const sumArr = sumOfArrayRecursion([2, 5, 3, 11]);
+console.log('sum', sumArr);
