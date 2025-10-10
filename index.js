@@ -12,7 +12,11 @@ import {
   traversingMatrix,
 } from './src/matrix.js';
 import { mergeSort } from './src/mergeSort.js';
-import { factorialRecurion, findEmployeePosition } from './src/recursion.js';
+import {
+  factorialRecurion,
+  fibonacciRecursion,
+  findEmployeePosition,
+} from './src/recursion.js';
 import {
   longestSubstringLengthWithoutRepeatingChars,
   maxSumSubarray,
@@ -48,5 +52,8 @@ console.log('---');
 // const position = findEmployeePosition(nestedObjEmployeeDetails, 'Kevin');
 // console.log('position--', position);
 
-const fac = factorialRecurion(7);
-console.log(fac);
+// const fac = factorialRecurion(7);
+// console.log(fac);
+
+const fib = fibonacciRecursion(5);
+console.log(fib);
