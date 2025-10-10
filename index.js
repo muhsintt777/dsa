@@ -1,6 +1,7 @@
 import array from './src/array.js';
 import { binerySearch } from './src/binerySearch.js';
 import { climbingStairs } from './src/climbingStairs.js';
+import { nestedObjEmployeeDetails } from './src/data.js';
 import linkedList from './src/linkedList.js';
 import {
   reverseRowMatrix,
@@ -11,6 +12,7 @@ import {
   traversingMatrix,
 } from './src/matrix.js';
 import { mergeSort } from './src/mergeSort.js';
+import { findEmployeePosition } from './src/recursion.js';
 import {
   longestSubstringLengthWithoutRepeatingChars,
   maxSumSubarray,
@@ -41,4 +43,7 @@ console.log('---');
 
 // subarrayWithGivenSum();
 
-climbingStairs();
+// climbingStairs();
+
+const position = findEmployeePosition(nestedObjEmployeeDetails, 'Kevin');
+console.log('position--', position);
