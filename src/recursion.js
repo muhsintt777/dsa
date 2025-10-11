@@ -48,3 +48,14 @@ export const sumOfNestedObjectNums = (obj) => {
 
   return sum;
 };
+
+export const countNestedObjKeys = (obj) => {
+  let count = 0;
+  for (const key in obj) {
+    count++;
+    if (typeof obj[key] === 'object') {
+      count += countNestedObjKeys(obj[key]);
+    }
+  }
+  return count;
+};

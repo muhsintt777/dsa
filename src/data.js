@@ -24,3 +24,21 @@ export const nestedObjEmployeeDetails = {
     },
   },
 };
+
+export const nestedNumObj = {
+  a: 1,
+  b: {
+    t: 'ee',
+    c: 2,
+    d: {
+      e: 2,
+      f: 5,
+      h: {
+        k: 2,
+        l: 2,
+        e: 'e',
+      },
+    },
+  },
+  g: 1,
+};
