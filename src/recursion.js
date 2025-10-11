@@ -70,3 +70,16 @@ export const findValueInNestedObj = (obj, target) => {
     }
   }
 };
+
+export const collectAllNumsInNestedObj = (obj) => {
+  let nums = [];
+  for (const key in obj) {
+    if (typeof obj[key] === 'object') {
+      const res = collectAllNumsInNestedObj(obj[key]);
+      nums = [...nums, ...res];
+    } else if (typeof obj[key] === 'number') {
+      nums.push(obj[key]);
+    }
+  }
+  return nums;
+};

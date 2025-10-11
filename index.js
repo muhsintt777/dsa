@@ -1,5 +1,6 @@
 import { nestedNumObj } from './src/data.js';
 import {
+  collectAllNumsInNestedObj,
   countNestedObjKeys,
   fibonacciRecursion,
   findValueInNestedObj,
@@ -50,5 +51,8 @@ console.log('---');
 // const keyCount = countNestedObjKeys(nestedNumObj);
 // console.log(keyCount);
 
-const val = findValueInNestedObj(nestedNumObj, 'k');
-console.log(val);
+// const val = findValueInNestedObj(nestedNumObj, 'k');
+// console.log(val);
+
+const numsArr = collectAllNumsInNestedObj(nestedNumObj);
+console.log(numsArr);
