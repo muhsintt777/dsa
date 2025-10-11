@@ -59,3 +59,14 @@ export const countNestedObjKeys = (obj) => {
   }
   return count;
 };
+
+export const findValueInNestedObj = (obj, target) => {
+  for (const key in obj) {
+    if (key === target) {
+      return obj[key];
+    } else if (typeof obj[key] === 'object') {
+      const res = findValueInNestedObj(obj[key], target);
+      if (res) return res;
+    }
+  }
+};

@@ -36,7 +36,7 @@ export const nestedNumObj = {
       h: {
         k: 2,
         l: 2,
-        e: 'e',
+        ee: 'e',
       },
     },
   },
