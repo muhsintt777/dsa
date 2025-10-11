@@ -34,3 +34,17 @@ export const sumOfArrayRecursion = (arr = []) => {
   arr.pop();
   return lastElment + sumOfArrayRecursion(arr);
 };
+
+export const sumOfNestedObjectNums = (obj) => {
+  let sum = 0;
+  for (const key in obj) {
+    const value = obj[key];
+    if (typeof value === 'object') {
+      sum += sumOfNestedObjectNums(value);
+    } else if (typeof value === 'number') {
+      sum += value;
+    }
+  }
+
+  return sum;
+};

@@ -1,4 +1,8 @@
-import { fibonacciRecursion, sumOfArrayRecursion } from './src/recursion.js';
+import {
+  fibonacciRecursion,
+  sumOfArrayRecursion,
+  sumOfNestedObjectNums,
+} from './src/recursion.js';
 
 console.log('---');
 
@@ -34,5 +38,25 @@ console.log('---');
 // const fib = fibonacciRecursion(5);
 // console.log(fib);
 
-const sumArr = sumOfArrayRecursion([2, 5, 3, 11]);
-console.log('sum', sumArr);
+// const sumArr = sumOfArrayRecursion([2, 5, 3, 11]);
+// console.log('sum', sumArr);
+
+const nestedNumObj = {
+  a: 1,
+  b: {
+    t: 'ee',
+    c: 2,
+    d: {
+      e: 2,
+      f: 5,
+      h: {
+        k: 2,
+        l: 2,
+        e: 'e',
+      },
+    },
+  },
+  g: 1,
+};
+const nestedSum = sumOfNestedObjectNums(nestedNumObj);
+console.log(nestedSum);
