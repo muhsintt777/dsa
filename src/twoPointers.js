@@ -37,3 +37,30 @@ export const isPalondrome = () => {
   }
   console.log('result=> ', isPalondrome);
 };
+
+// Two sum II
+export const twoSumII = () => {
+  const numbers = [-5, 7, 11, 15];
+  const target = 10;
+
+  let left = 0;
+  let right = numbers.length - 1;
+
+  while (left < right) {
+    const currLeft = numbers[left];
+    const currRight = numbers[right];
+    const sum = currLeft + currRight;
+    if (sum === target) {
+      console.log('res', left, right);
+      break;
+    }
+    if (sum < target) {
+      left++;
+      continue;
+    }
+    if (sum > target) {
+      right--;
+      continue;
+    }
+  }
+};
