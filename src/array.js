@@ -53,3 +53,26 @@ function switchArrayValues() {
 // myFunc = findTargetSum;
 
 export default myFunc;
+
+const numsArr = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4];
+
+function removeDuplicates(nums) {
+  if (nums.length === 0) return 0;
+
+  let left = 0;
+  let right = 1;
+
+  while (right < nums.length) {
+    if (nums[left] === nums[right]) {
+      right++;
+    } else {
+      left++;
+      nums[left] = nums[right];
+      right++;
+    }
+  }
+
+  return { left: left + 1, nums: [...nums] };
+}
+
+console.log(removeDuplicates(numsArr));
