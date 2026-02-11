@@ -73,3 +73,37 @@ export const subarrayWithGivenSum = () => {
     }
   }
 };
+
+export const longestSubstringWithKUniqueChars = () => {
+  const s = 'abcde';
+  const k = 3;
+
+  let left = 0;
+  let right = 0;
+  let maxL = 0;
+  const map = new Map();
+
+  while (right < s.length) {
+    const curr = s[right];
+    const currCount = map.get(curr) || 0;
+    map.set(curr, currCount + 1);
+    right++;
+
+    while (map.size > k) {
+      const leftChar = s[left];
+      const newCount = map.get(leftChar) - 1;
+      if (newCount === 0) {
+        map.delete(leftChar);
+      } else {
+        map.set(leftChar, newCount);
+      }
+      left++;
+    }
+
+    const newLength = right - left;
+    console.log(maxL, newLength);
+    maxL = Math.max(maxL, right - left);
+  }
+
+  console.log('result: ', maxL);
+};
