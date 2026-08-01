@@ -25,3 +25,28 @@ var productExceptSelf = function (nums) {
 
   return result;
 };
+
+// solution without extra space
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var productExceptSelf = function (nums) {
+  const limit = nums.length;
+  const result = new Array(limit);
+  result[0] = 1;
+
+  let i = 0;
+  while (i < limit - 1) {
+    const sum1 = nums[i] * result[i];
+    result[i + 1] = sum1;
+    i++;
+  }
+
+  let currPro = 1;
+  for (let j = limit - 1; j >= 0; j--) {
+    result[j] = result[j] * currPro;
+    currPro = currPro * nums[j];
+  }
+  return result;
+};
