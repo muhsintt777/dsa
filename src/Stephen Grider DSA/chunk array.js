@@ -13,3 +13,13 @@ function chunk(array, size) {
 
   return res;
 }
+
+function chunk2(arr, size) {
+  const res = [];
+  let i = 0;
+  while (i < arr.length) {
+    res.push(arr.slice(i, i + size));
+    i = i + size;
+  }
+  return res;
+}
